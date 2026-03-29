@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clif Tech</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="icon"type="image/png"href="cliftech white logo.jpeg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> 
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" 
+            class="brand-group">
+            <span class="brand-name">CLIF TECH</span>
+            <img src="cliftech white logo.jpeg" alt="Company Logo"class="logo-img">
+            </a>
+            <input type="checkbox"
+            id="menu-toggle">
+            <label for="menu-toggle"
+        class="menu-button"> 
+    <span></span>
+    <span></span>
+    <span></span>
+    
+    </label>
+
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+    </nav>
+    
+
+    <div class="container">
+    <div class="hero-content" data-aos="zoom-in">
+        <h5 class="hero-title">CLIF <span class="highlight">TECH </span></h5>
+        <ul class="hero-description">
+  <h4> Professional ICT training, creative design, and secure systems management.
+    Whether you are a student or a business, we give you the tools to excel.
+  </h4>
+  <br>
+
+
+<p><h4><strong> The Three Pillars : </strong></h4> </p> <br>
+<ul class="fa-ul">
+  <li> <span class="fa-li"><i class="fa-solid fa-wrench"></i></span>
+    <strong>We Fix:</strong> Professional hardware and software troubleshooting.
+  Whether it's BIOS configuration, OS installation, PC performance optimization,
+   we ensure your tech works for you.
+   </li>
+
+   
+   <li> <span class="fa-li"><i class="fa-solid fa-code"></i></span>
+    <strong>We Build:</strong> Bringing your brand to life through modern web development
+    and creative graphic design. From custom logos to responsive websites, we build your digital 
+    presence from the ground up.
+   </li>
+
+
+      <li> <span class="fa-li"><i class="fa-solid fa-shield-halved"></i></span>
+   <strong>We Secure:</strong> Protecting what matters most. We implement and 
+    teach cybersecurity best practices, data protection, and secure networking 
+    to keep your information safe from threats. 
+   </li>
+
+
+</ul>
+        
+        
+        <div class="hero-btns">
+            </div>
+    </div>
+</div>
+    
+<script>
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (menuToggle) {
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            console.log("Menu toggled"); // This will show in your laptop's Inspect Console
+        });
+        }
+        window.addEventListener('scroll', () => {
+    const navContainer = document.querySelector('.nav-container');
+    
+    if (window.scrollY > 50) {
+        navContainer.classList.add('scrolled');
+    } else {
+        navContainer.classList.remove('scrolled');
+    }
+});
+</script>
+
+</body>
+</html>

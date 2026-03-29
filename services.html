@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Services | Clif Tech</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="icon"type="image/png"href="cliftech white logo.jpeg">
+<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="services.html" 
+            class="brand-group">
+            <span class="brand-name">CLIF TECH</span>
+            <img src="cliftech white logo.jpeg" alt="Company Logo"class="logo-img">
+            </a>
+            <input type="checkbox"
+            id="menu-toggle">
+            <label for="menu-toggle"
+        class="menu-button"> 
+    <span></span>
+    <span></span>
+    <span></span>
+    
+    </label>
+
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html"class="active">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+ 
+
+<div class="container">
+    <h2>CLIF TECH Services</h2>
+    <p>Professional ICT solutions and specialized training modules.</p>
+
+    <div class="services-grid">
+        <div class="service-card">
+            <h3>System & Software</h3>
+            <p>OS installations, software troubleshooting, and hardware optimization.</p>
+            <a href="system and software.html" class="btn">View Details</a>
+        </div>
+
+        <div class="service-card">
+            <h3>Ethical Hacking</h3>
+            <p>Learn to identify vulnerabilities and secure digital perimeters.</p>
+            <a href="ethical hacking.html" class="btn">View Details</a>
+        </div>
+
+        <div class="service-card">
+            <h3>System Administration</h3>
+            <p>Managing server reliability and multi-user computing environments.</p>
+            <a href="system administration.html" class="btn">View Details</a>
+        </div>
+
+        <div class="service-card">
+            <h3>Networking</h3>
+            <p>Designing and securing robust LAN/WAN infrastructures.</p>
+            <a href="networking.html" class="btn">View Details</a>
+        </div>
+
+        <div class="service-card">
+            <h3>Website Design</h3>
+            <p>Building responsive sites with VS Code, HTML, CSS, and PostgreSQL.</p>
+            <a href="website design.html" class="btn">View Details</a>
+        </div>
+
+        <div class="service-card">
+            <h3>Graphic Design</h3>
+            <p>Creative visual branding and digital assets using Adobe Photoshop.</p>
+            <a href="graphic design.html" class="btn">View Details</a>
+        </div>
+
+        <div class="service-card">
+            <h3>Phishing and Phishing Defense</h3>
+            <p>Training on identifying and preventing social engineering threats.</p>
+            <a href="phishing.html" class="btn">View Details</a>
+        </div>
+
+        <div class="service-card">
+            <h3>Productivity Software</h3>
+            <p>Expertise in Microsoft Word, Excel, and PowerPoint.</p>
+            <a href="productivity.html" class="btn">View Details</a>
+        </div>
+
+        <div class="service-card">
+            <h3>Cybersecurity</h3>
+            <p>Foundational training in data protection.</p>
+            <a href="cyber security.html" class="btn">View Details</a>
+        </div>
+
+        <div class="service-card">
+            <h3>Coding Fundamentals</h3>
+            <p>Coding to build simple game applications.</p>
+            <a href="coding.html" class="btn">View Details</a>
+        </div>
+
+        <div class="service-card">
+            <h3>Artificial Intelligence</h3>
+            <p>Exploring AI tools and machine learning.</p>
+            <a href="ai.html" class="btn">View Details</a>
+        </div>
+
+        <div class="service-card">
+            <h3>Drone Piloting</h3>
+            <p>Technical training in drone operations and safety.</p>
+            <a href="drone piloting.html" class="btn">View Details</a>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (menuToggle) {
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            console.log("Menu toggled"); // This will show in your laptop's Inspect Console
+        });
+    }
+
+    window.addEventListener('scroll', () => {
+    const navContainer = document.querySelector('.nav-container');
+    
+    if (window.scrollY > 50) {
+        navContainer.classList.add('scrolled');
+    } else {
+        navContainer.classList.remove('scrolled');
+    }
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+.logo-img {
+    height: 40px;    /* Set a fixed height to keep the nav bar slim */
+    width: auto;     /* This keeps the logo from stretching or squishing */
+    display: block;  /* Removes extra space below the image */
+    transition: 0.3s;
+}
+
+.logo-img:hover {
+    opacity: 0.8;    /* Gives a subtle visual cue when hovered */
+}

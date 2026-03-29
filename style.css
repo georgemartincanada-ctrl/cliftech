@@ -1,0 +1,671 @@
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html{
+    overflow-y:scroll;
+
+}
+body {
+    transition: 0.34s ease;
+font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    /* background-image: url(background.jpg);*/
+    background-color:#03455d;
+  /*color: #470909;*/
+  padding-bottom: 60px;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Navigation Bar */
+nav {
+   /* background:rgba(15, 1, 60, 0.979);*/
+    background-image: url(background.jpg);
+    padding: 0;
+    position: sticky;
+    top: 20px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+   /* border-bottom: 1px solid rgba(255,255,0.1);*/
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    justify-content: center;
+}
+
+
+/* Adjust the Nav Container to push the Menu Button to the far right */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 90%;
+    max-width: 1200px;
+    height: 70px;
+    padding: 0 30px;
+    background-image: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    /*box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);*/
+    transition: all 0.4s ease;
+    
+    
+}
+.nav-container.scrolled{
+    border-color: rgba(0, 212, 255, 0.8);
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.4),0 0 30px rgba(0, 212, 255, 0.1);
+    background: rgba(4, 39, 76, 0.3);
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    
+}
+
+nav ul li {
+    padding: 0 10px;
+    
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #e1b400;
+}
+
+/* The Hamburger Button (Black Square) */
+.menu-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 45px;
+    height: 45px;
+    background: #66b20962; /* Black background like your image */
+    padding: 10px;
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(5, 12, 138, 0.2);
+}
+
+/* The white lines inside the button */
+.menu-button span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: rgb(9, 0, 0);
+    border-radius: 2px;
+}
+
+/* The Menu Links - Hidden by default */
+.nav-links {
+    display: none; 
+    flex-direction: column;
+    width: 100%;
+    background: #2c3e50;
+    position: absolute;
+    top: 70px; /* Sits right under the nav bar */
+    left: 0;
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+.nav-links li {
+    padding: 15px 0;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* THE MAGIC: When checkbox is checked, show the menu */
+#menu-toggle:checked ~ .nav-links {
+    display: flex;
+}
+
+/* Page Content */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 40px;
+    
+    /* 1. Semi-transparent white background */
+    background: rgba(212, 53, 53, 0.15);
+    
+    /* 2. The Blur Effect - this creates the 'glass' look */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); /* For Safari support */
+    
+    /* 3. Subtle borders and rounding */
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    
+    /* 4. Soft 3D Shadow */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    
+    /* 5. Ensure text remains readable */
+    color: #ffffff; 
+}
+
+/* Optional: Make headers extra bright on the glass background */
+.container h1 {
+    color: #010000;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Logo Styling */
+.logo-img {
+    height: 35px; /* Smaller size */
+    margin: 5px 10px;
+    vertical-align: middle;
+}   .logo-img:hover{
+    opacity: 0.8;
+   }
+
+/* Hide the actual checkbox */
+
+#menu-toggle {
+    display: none;
+    
+}
+
+
+/* Layout for the Nav Container */
+.menu-button:hover {
+    background: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.3);
+}
+
+.menu-button:active {
+    transform: translateY(1px); /* Sinks slightly when clicked */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.menu-toggle{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 35px;
+    height: 30px;
+    background: transparent;
+    border:none;
+    cursor:pointer;
+    padding:5px;
+    z-index:1001;
+}
+.bar{
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    display: block;
+}
+/* Container for Name + Logo */
+.brand-group {
+    display: flex;
+    align-items: center; /* Aligns text and image vertically */
+    text-decoration: none; /* Removes underline from name */
+    gap: 15px; /* Adds space between the name and the image */
+
+}
+
+/* Styling the Brand Name */
+.brand-name {
+    font-size: 1.5rem;
+    font-weight: 800; /* Extra bold like 'Swift' */
+    color: #fdfdff; /* Deep blue color */
+    letter-spacing: -1px; /* Tighter spacing for a modern look */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+}
+
+.active{
+
+    @media screen and (max-width: 768px) {
+    /* This hides the menu links by default on phone */
+    .nav-links {
+        display: none; 
+        flex-direction: column;
+        width: 220%;
+        height: auto;
+        position: absolute;
+        top: 60px; /* Adjust this to match your nav height */
+        right: 0;
+        background-color: #04274c;
+        padding: 10px;
+        box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        border-radius: 0 0 0 10px;
+    }
+.nav-links li{
+    width: 100%;
+    text-align: left;
+}
+        .nav-links.active{
+                display: flex !important;
+            }
+        .nav-links li a{
+            display:block;
+            padding:15px 25px;
+            color: white;
+            font-size: 0.9rem;
+            border-bottom: 1px solid rgba(255, 255, 0,1);
+            transition: 0.3s;
+        }
+        .nav-links li a:hover{
+            background-color: #063a70;
+            padding-left: 35px;
+        }
+        }
+        .logo-img{
+            height:40px !important;
+            width:auto;
+            margin-left: 10px;
+        }
+        .brand-name{
+            font-size: 1.1rem !important;
+            white-space: nowrap;
+        }
+        .nav-container{
+            padding: 0 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 95%;
+            border-radius: 20px;
+        }
+    }
+
+    /* THE MAGIC LINE: This shows the menu when JS toggles it */
+    @media screen and (max-width: 768px) {
+    .nav-links.active {
+        display: flex !important;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust this to fit right under your nav bar */
+        right: 0;   /* This aligns it to the right side */
+        width: 200px; /* This makes the menu narrow/rectangular instead of huge */
+        /*background-color: #04274c;*/ 
+        padding: 10px 0;
+        border-radius: 0 0 0 10px; /* Smooth corner on the bottom-left */
+        box-shadow: -5px 5px 15px rgba(0,0,0,0.3);
+        z-index: 1000;
+        background: rgba(4, 39, 76, 0.8); /* Semi-transparent version of your brand blue */
+        backdrop-filter: blur(10px);
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+
+
+        .hero-title{
+            font-size: 2.2rem;
+        }
+        .hero-content{
+            padding: 20px;
+            margin: 0 15px;
+        }
+    }
+
+    /* Shrink the space between the links */
+    .nav-links.active li {
+        margin: 5px 0;
+        width: 100%;
+    }
+
+    /* Make the text slightly smaller for a cleaner look */
+    .nav-links.active li a {
+        font-size: 1rem;
+        padding: 10px 20px;
+        display: block;
+        text-align: left; /* Aligns text to the left like a dashboard */
+    }
+}
+    /* Make the links look good in a list */
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+
+
+    .service-card p {
+        font-size: 0.95rem;
+        line-height: 1.4;
+        
+    }
+
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap; /* This is the secret! It lets cards drop to the next row */
+}
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(15px);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.services-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap; /* This is the secret! It lets cards drop to the next row */
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(168, 246, 12, 0.4);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.service-card h3 {
+    color: #aaff00; /* Gold for visibility */
+    margin-bottom: 10px;
+    
+}
+
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #3498db;
+    color: rgb(1, 0, 0);
+    text-decoration: none;
+    border-radius: 5px;
+}
+.service-detail {
+    line-height: 1.8;
+    margin-top: 20px;
+    
+}
+
+.service-detail h3 {
+    margin: 25px 0 10px 0;
+    color: #befc02;
+}
+
+/* Button style for the 'Back' link */
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 25px;
+    background: #3498db;
+    color: #000a07;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #9dff01;
+}
+
+
+/* Contact Form Layout */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.input-group label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #a7f106; /* Gold Labels */
+}
+
+/* Glass Input Styling */
+.contact-form input, 
+.contact-form textarea, 
+.contact-form select {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 12px;
+    color: #000608;
+    font-size: 1rem;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+/* Focus Effect: Gold Glow when typing */
+.contact-form input:focus, 
+.contact-form textarea:focus, 
+.contact-form select:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #f1c40f;
+    box-shadow: 0 0 15px rgba(241, 196, 15, 0.4);
+    width:100%;
+    padding:12px;
+    border: 1px solid #ccc;
+    border-radius: 8px ;
+    background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Placeholder Color */
+::placeholder {
+    color: rgb(49, 44, 44);
+}
+
+/* 3D Submit Button */
+.submit-btn {
+    background: #3498db; 
+  /*color: #000000;*/
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    background: #e1b400;
+}
+
+.submit-btn:active {
+    transform: translateY(1px);
+}
+
+/* Container styling */
+.success-container {
+    text-align: center;
+    padding: 50px;
+    background: var(--glass-bg); /* Using your glass variables */
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    max-width: 500px;
+    margin: 100px auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* The Animated Circle */
+.check-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #28a745; /* Success Green */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 40px;
+    color: white;
+    animation: popIn 0.6s cubic-bezier(0.26, 0.53, 0.74, 1.48) forwards;
+}
+
+/* The "Pop" Animation */
+@keyframes popIn {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Subtle pulse for the button to guide the user back */
+.btn-back {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 30px;
+    background: #04274c;
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s;
+    animation: pulseButton 2s infinite;
+}
+
+@keyframes pulseButton {
+    0% { box-shadow: 0 0 0 0 rgba(4, 39, 76, 0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(4, 39, 76, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(4, 39, 76, 0); }
+}
+
+.success-actions {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.secondary-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #f1c40f;
+    color: #f1c40f;
+}
+
+.secondary-btn:hover {
+    background: rgba(241, 196, 15, 0.1);
+}
+
+/* This tells the menu to appear when the JavaScript toggles 'active' */
+.nav-links.active {
+    display: flex !important;
+    background-color: #04274c; /* Matches your brand blue */
+    position: absolute;
+    top: 80px; /* Sits right below the nav bar */
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    padding: 20px 0;
+    z-index: 1000;
+}
+
+/* Make sure the links inside the mobile menu are white and spaced out */
+.nav-links.active li {
+    margin: 15px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.nav-links.active li a {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.05); /* Very light glass tint */
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.hero-title {
+    font-size: 2.5rem; /* Large, bold heading */
+    margin-bottom: 20px;
+    color: rgb(193, 255, 34);
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #fffefe;
+}
+/* Makes your Titles bold and strong */
+h1, h2, h3 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    color: yellow;
+}
+
+/* Makes your descriptions (like in the Services cards) clean */
+p {
+    font-weight: 400;
+    color: var(--text-secondary); /* Uses the variable we created earlier */
+}
+@keyframes pulse-glow {
+    0% { box-shadow: 0 0 15px rgba(0, 212, 255, 0.4); }
+    50% { box-shadow: 0 0 25px rgba(0, 212, 255, 0.6); }
+    100% { box-shadow: 0 0 15px rgba(0, 212, 255, 0.4); }
+}
+
+.nav-container.scrolled {
+    animation: pulse-glow 2s infinite ease-in-out;
+}
+.about-section {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05); /* This adds a subtle "glass" box effect */
+    border-radius: 10px;
+    border-left: 4px solid #ccff00; /* Use your "highlight" color here */
+}
+
+.about-intro {
+    font-size: 1.2rem;
+    color: #ffffff; /* Your highlight color */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+
+
+
