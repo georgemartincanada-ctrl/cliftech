@@ -16,7 +16,7 @@ body {
 font-family: 'Inter', sans-serif;
     line-height: 1.6;
     /* background-image: url(background.jpg);*/
-    background-color:#03455d;
+    background-color:#e9e6f58d;
   /*color: #470909;*/
   padding-bottom: 60px;
   font-size: 16px;
@@ -29,7 +29,7 @@ font-family: 'Inter', sans-serif;
 /* Navigation Bar */
 nav {
    /* background:rgba(15, 1, 60, 0.979);*/
-    background-image: url(background.jpg);
+    /*background-image: url(background.jpg);*/
     padding: 0;
     position: sticky;
     top: 20px;
@@ -40,8 +40,8 @@ nav {
     z-index: 1000;
     backdrop-filter: blur(10px);
    /* border-bottom: 1px solid rgba(255,255,0.1);*/
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    background: rgba(8, 0, 169, 0.965);
+    /*box-shadow: 0 4px 30px rgba(255, 255, 255, 0.938);*/
     justify-content: center;
 }
 
@@ -56,16 +56,15 @@ nav {
     max-width: 1200px;
     height: 70px;
     padding: 0 30px;
-    background-image: rgba(255, 255, 255, 0.1);
+    /*background-image: rgba(255, 255, 255, 0.1);*/
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border-radius: 50px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    /*box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);*/
+    /*border: 1px solid rgba(255, 255, 255, 0.1);*/
+    box-shadow: 0 8px 32px 0 rgba(194, 168, 3, 0.429);
     transition: all 0.4s ease;
-    
-    
 }
+
 .nav-container.scrolled{
     border-color: rgba(0, 212, 255, 0.8);
     box-shadow: 0 0 15px rgba(0, 212, 255, 0.4),0 0 30px rgba(0, 212, 255, 0.1);
@@ -74,8 +73,7 @@ nav {
 nav ul {
     display: flex;
     list-style: none;
-    
-}
+    }
 
 nav ul li {
     padding: 0 10px;
@@ -83,14 +81,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
 }
 
 nav ul li a:hover, nav ul li a.active {
-    color: #e1b400;
+    color: #1805ebe2;
 }
 
 /* The Hamburger Button (Black Square) */
@@ -100,14 +98,13 @@ nav ul li a:hover, nav ul li a.active {
     justify-content: space-around;
     width: 45px;
     height: 45px;
-    background: #66b20962; /* Black background like your image */
+    background: #fcfcfcf9; /* white background like your image */
     padding: 10px;
     border-radius: 8px; /* Rounded corners */
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(5, 12, 138, 0.2);
 }
 
-/* The white lines inside the button */
+/* The white black inside the button */
 .menu-button span {
     display: block;
     width: 100%;
@@ -121,19 +118,13 @@ nav ul li a:hover, nav ul li a.active {
     display: none; 
     flex-direction: column;
     width: 100%;
-    background: #2c3e50;
+    background: #b7ff00;
     position: absolute;
     top: 70px; /* Sits right under the nav bar */
     left: 0;
     text-align: center;
     padding: 1rem 0;
-    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
-}
-
-.nav-links li {
-    padding: 15px 0;
-    color: white;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 15px rgba(98, 0, 255, 0.1);
 }
 
 /* THE MAGIC: When checkbox is checked, show the menu */
@@ -148,7 +139,7 @@ nav ul li a:hover, nav ul li a.active {
     padding: 40px;
     
     /* 1. Semi-transparent white background */
-    background: rgba(212, 53, 53, 0.15);
+    background: rgba(8, 0, 169, 0.965);
     
     /* 2. The Blur Effect - this creates the 'glass' look */
     backdrop-filter: blur(12px);
@@ -159,7 +150,7 @@ nav ul li a:hover, nav ul li a.active {
     border: 1px solid rgba(255, 255, 255, 0.2);
     
     /* 4. Soft 3D Shadow */
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(194, 168, 3, 0.429);
     
     /* 5. Ensure text remains readable */
     color: #ffffff; 
@@ -167,7 +158,7 @@ nav ul li a:hover, nav ul li a.active {
 
 /* Optional: Make headers extra bright on the glass background */
 .container h1 {
-    color: #010000;
+    color: #fffffff7;
     text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
@@ -186,13 +177,11 @@ nav ul li a:hover, nav ul li a.active {
     display: none;
     
 }
-
-
 /* Layout for the Nav Container */
 .menu-button:hover {
-    background: #333;
+    background: #eeff00d8;
     transform: translateY(-2px);
-    box-shadow: 0 6px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 6px 10px rgba(116, 1, 1, 0.649);
 }
 
 .menu-button:active {
@@ -224,18 +213,17 @@ nav ul li a:hover, nav ul li a.active {
     display: flex;
     align-items: center; /* Aligns text and image vertically */
     text-decoration: none; /* Removes underline from name */
-    gap: 15px; /* Adds space between the name and the image */
-
+    gap: 15px; /* Adds space between the name and the image*/
 }
 
 /* Styling the Brand Name */
 .brand-name {
-    font-size: 1.5rem;
-    font-weight: 800; /* Extra bold like 'Swift' */
-    color: #fdfdff; /* Deep blue color */
+    font-size: 2.5rem;
+    font-weight: 500; /* Extra bold like 'Swift' */
+    color: white;
     letter-spacing: -1px; /* Tighter spacing for a modern look */
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-
+    text-shadow: #aaff00;
 }
 
 .active{
@@ -294,7 +282,6 @@ nav ul li a:hover, nav ul li a.active {
             border-radius: 20px;
         }
     }
-
     /* THE MAGIC LINE: This shows the menu when JS toggles it */
     @media screen and (max-width: 768px) {
     .nav-links.active {
@@ -312,8 +299,6 @@ nav ul li a:hover, nav ul li a.active {
         background: rgba(4, 39, 76, 0.8); /* Semi-transparent version of your brand blue */
         backdrop-filter: blur(10px);
         border-left: 1px solid rgba(255, 255, 255, 0.1);
-
-
         .hero-title{
             font-size: 2.2rem;
         }
@@ -341,16 +326,10 @@ nav ul li a:hover, nav ul li a.active {
     .nav-links li {
         margin: 15px 0;
     }
-
-
-
     .service-card p {
         font-size: 0.95rem;
-        line-height: 1.4;
-        
+        line-height: 1.4;   
     }
-
-
 .services-container {
     display: flex;
     justify-content: center;
@@ -366,13 +345,14 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 .service-card {
-    background: rgba(255, 255, 255, 0.1); 
-    backdrop-filter: blur(15px);
+    background: rgb(0, 21, 255); 
+   /* backdrop-filter: blur(15px);*/
     padding: 30px;
     border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 234, 4, 0.397);
     text-align: center;
     transition: all 0.3s ease;
+    border-radius: 30px;
 }
 .services-container {
     display: flex;
@@ -384,8 +364,8 @@ nav ul li a:hover, nav ul li a.active {
 
 .service-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(168, 246, 12, 0.4);
-    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 30px rgba(203, 255, 32, 0.986);
+    background: rgba(181, 249, 20, 0.2);
 }
 
 .service-card h3 {
@@ -424,7 +404,7 @@ nav ul li a:hover, nav ul li a.active {
     color: #000a07;
     text-decoration: none;
     border-radius: 8px;
-    font-weight: bold;
+    font weight: : bold;
     transition: background 0.3s;
 }
 
@@ -449,7 +429,7 @@ nav ul li a:hover, nav ul li a.active {
 
 .input-group label {
     margin-bottom: 8px;
-    font-weight: bold;
+    font weight: : bold;
     color: #a7f106; /* Gold Labels */
 }
 
@@ -472,7 +452,7 @@ nav ul li a:hover, nav ul li a.active {
 .contact-form textarea:focus, 
 .contact-form select:focus {
     outline: none;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(157, 255, 0, 0.2);
     border-color: #f1c40f;
     box-shadow: 0 0 15px rgba(241, 196, 15, 0.4);
     width:100%;
@@ -485,17 +465,17 @@ nav ul li a:hover, nav ul li a.active {
 
 /* Placeholder Color */
 ::placeholder {
-    color: rgb(49, 44, 44);
+    color: rgb(255, 255, 255);
 }
 
 /* 3D Submit Button */
 .submit-btn {
-    background: #3498db; 
+    background: #05d2cf49; 
   /*color: #000000;*/
     padding: 15px;
     border: none;
     border-radius: 8px;
-    font-weight: 800;
+    font-weight:  800;
     text-transform: uppercase;
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
@@ -504,7 +484,7 @@ nav ul li a:hover, nav ul li a.active {
 
 .submit-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 20px rgb(255, 255, 255);
     background: #e1b400;
 }
 
@@ -550,12 +530,16 @@ nav ul li a:hover, nav ul li a.active {
     display: inline-block;
     margin-top: 25px;
     padding: 12px 30px;
-    background: #04274c;
-    color: white;
+    background: #05d2cf49; 
     border-radius: 50px;
     text-decoration: none;
     transition: 0.3s;
     animation: pulseButton 2s infinite;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgb(255, 255, 255);
+    font-weight:  800;
+    text-transform: uppercase;
+    cursor: pointer;
 }
 
 @keyframes pulseButton {
@@ -609,15 +593,16 @@ nav ul li a:hover, nav ul li a.active {
 .hero-content {
     max-width: 800px;
     padding: 40px;
-    background: rgba(255, 255, 255, 0.05); /* Very light glass tint */
+    background: rgba(8, 228, 235, 0.327); /* Very light glass tint */
     backdrop-filter: blur(10px);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    /*box-shadow: 0 10px 30px rgba(255, 255, 255, 0.944);*/
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .hero-title {
-    font-size: 2.5rem; /* Large, bold heading */
+    font-size: 1.5rem; /* Large, bold heading */
     margin-bottom: 20px;
     color: rgb(193, 255, 34);
     line-height: 1.2;
@@ -629,18 +614,13 @@ nav ul li a:hover, nav ul li a.active {
     color: #fffefe;
 }
 /* Makes your Titles bold and strong */
-h1, h2, h3 {
-    font-weight: 700;
+h1, h2, h3,h4 {
+    font-weight:  700;
     letter-spacing: -0.02em;
     line-height: 1.2;
-    color: yellow;
+    color: rgb(234, 255, 0);
 }
 
-/* Makes your descriptions (like in the Services cards) clean */
-p {
-    font-weight: 400;
-    color: var(--text-secondary); /* Uses the variable we created earlier */
-}
 @keyframes pulse-glow {
     0% { box-shadow: 0 0 15px rgba(0, 212, 255, 0.4); }
     50% { box-shadow: 0 0 25px rgba(0, 212, 255, 0.6); }
@@ -658,14 +638,29 @@ p {
     border-left: 4px solid #ccff00; /* Use your "highlight" color here */
 }
 
-.about-intro {
-    font-size: 1.2rem;
-    color: #ffffff; /* Your highlight color */
-    font-weight: bold;
-    margin-bottom: 20px;
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #3498db;
+    color: rgb(1, 0, 0);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
 }
-
-
-
-
-
+p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: medium;
+    font-style: normal;
+    font
+}
+/*.fa-ul{
+    margin-left: 30px;
+    list-style-type: noned;
+}
+.fa-li{
+    color-scheme: #2ecc71;
+}
+.fa-ul li{
+    margin-bottom: 15px;
+}*/
