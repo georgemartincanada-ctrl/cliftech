@@ -139,7 +139,7 @@ nav ul li a:hover, nav ul li a.active {
     padding: 40px;
     
     /* 1. Semi-transparent white background */
-    background: rgba(8, 0, 169, 0.965);
+    background: rgb(5, 0, 103);
     
     /* 2. The Blur Effect - this creates the 'glass' look */
     backdrop-filter: blur(12px);
@@ -218,8 +218,9 @@ nav ul li a:hover, nav ul li a.active {
 
 /* Styling the Brand Name */
 .brand-name {
-    font-size: 2.5rem;
-    font-weight: 500; /* Extra bold like 'Swift' */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-weight: 400; /* Extra bold like 'Swift' */
     color: white;
     letter-spacing: -1px; /* Tighter spacing for a modern look */
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -425,12 +426,14 @@ nav ul li a:hover, nav ul li a.active {
     display: flex;
     flex-direction: column;
     text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .input-group label {
     margin-bottom: 8px;
-    font weight: : bold;
+    font-weight: 400;
     color: #a7f106; /* Gold Labels */
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 /* Glass Input Styling */
@@ -592,8 +595,8 @@ nav ul li a:hover, nav ul li a.active {
 
 .hero-content {
     max-width: 800px;
-    padding: 40px;
-    background: rgba(8, 228, 235, 0.327); /* Very light glass tint */
+    padding: 40px;   
+     background: rgb(0, 21, 255); 
     backdrop-filter: blur(10px);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -619,6 +622,7 @@ h1, h2, h3,h4 {
     letter-spacing: -0.02em;
     line-height: 1.2;
     color: rgb(234, 255, 0);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 @keyframes pulse-glow {
