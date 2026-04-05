@@ -16,7 +16,7 @@ body {
 font-family: 'Inter', sans-serif;
     line-height: 1.6;
     /* background-image: url(background.jpg);*/
-    background-color:#e9e6f58d;
+   /* background-color:#e9e6f58d;*/
   /*color: #470909;*/
   padding-bottom: 60px;
   font-size: 16px;
@@ -24,6 +24,13 @@ font-family: 'Inter', sans-serif;
   letter-spacing: -0.01em;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
+    background-image:url(macbook.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+
 }
 
 /* Navigation Bar */
@@ -139,7 +146,7 @@ nav ul li a:hover, nav ul li a.active {
     padding: 40px;
     
     /* 1. Semi-transparent white background */
-    background: rgb(5, 0, 103);
+    background: rgba(5, 0, 103, 0.257);
     
     /* 2. The Blur Effect - this creates the 'glass' look */
     backdrop-filter: blur(12px);
@@ -431,8 +438,8 @@ nav ul li a:hover, nav ul li a.active {
 
 .input-group label {
     margin-bottom: 8px;
-    font-weight: 400;
-    color: #a7f106; /* Gold Labels */
+    font-weight: bold;
+    color: #000000; /* Gold Labels */
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -444,10 +451,11 @@ nav ul li a:hover, nav ul li a.active {
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 8px;
     padding: 12px;
-    color: #000608;
+    color: #000000;
     font-size: 1rem;
     backdrop-filter: blur(5px);
     transition: all 0.3s ease;
+    font-weight: bold;
 }
 
 /* Focus Effect: Gold Glow when typing */
@@ -594,9 +602,16 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 .hero-content {
-    max-width: 800px;
-    padding: 40px;   
-     background: rgb(0, 21, 255); 
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 20px;   
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: rgb(0, 21, 255); 
     backdrop-filter: blur(10px);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -623,6 +638,7 @@ h1, h2, h3,h4 {
     line-height: 1.2;
     color: rgb(234, 255, 0);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: medium;
 }
 
 @keyframes pulse-glow {
@@ -654,15 +670,16 @@ h1, h2, h3,h4 {
 }
 p{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: medium;
     font-style: normal;
-    font
+    
 }
-/*.fa-ul{
-    margin-left: 30px;
-    list-style-type: noned;
+.fa-ul li{
+    margin-bottom: 25px;
+    line-height: 1.6;
+    padding-left: 10px;
 }
-.fa-li{
+    
+/*.fa-li{
     color-scheme: #2ecc71;
 }
 .fa-ul li{
