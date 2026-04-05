@@ -15,22 +15,22 @@ body {
     transition: 0.34s ease;
 font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    /* background-image: url(background.jpg);*/
-   /* background-color:#e9e6f58d;*/
-  /*color: #470909;*/
   padding-bottom: 60px;
   font-size: 16px;
   line-height: 1.6;
   letter-spacing: -0.01em;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
-    background-image:url(macbook.jpg);
+    background-image:url(laptop6.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    background-repeat: no-repeat;
-    min-height: 100vh;
 
+}
+@media (max-width:768px) {
+    body{ 
+        background-attachment: scroll;
+    }
 }
 
 /* Navigation Bar */
@@ -47,7 +47,7 @@ nav {
     z-index: 1000;
     backdrop-filter: blur(10px);
    /* border-bottom: 1px solid rgba(255,255,0.1);*/
-    background: rgba(8, 0, 169, 0.965);
+    background: rgba(0, 0, 0, 0.9);
     /*box-shadow: 0 4px 30px rgba(255, 255, 255, 0.938);*/
     justify-content: center;
 }
@@ -74,8 +74,8 @@ nav {
 
 .nav-container.scrolled{
     border-color: rgba(0, 212, 255, 0.8);
-    box-shadow: 0 0 15px rgba(0, 212, 255, 0.4),0 0 30px rgba(0, 212, 255, 0.1);
-    background: rgba(4, 39, 76, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.9);
 }
 nav ul {
     display: flex;
@@ -88,7 +88,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
@@ -125,7 +125,7 @@ nav ul li a:hover, nav ul li a.active {
     display: none; 
     flex-direction: column;
     width: 100%;
-    background: #b7ff00;
+background: rgb(0, 0, 0);
     position: absolute;
     top: 70px; /* Sits right under the nav bar */
     left: 0;
@@ -146,7 +146,8 @@ nav ul li a:hover, nav ul li a.active {
     padding: 40px;
     
     /* 1. Semi-transparent white background */
-    background: rgba(5, 0, 103, 0.257);
+    background: rgba(5, 0, 103, 0.26);
+    
     
     /* 2. The Blur Effect - this creates the 'glass' look */
     backdrop-filter: blur(12px);
@@ -227,7 +228,7 @@ nav ul li a:hover, nav ul li a.active {
 .brand-name {
     font-family: Arial, Helvetica, sans-serif;
     font-size: medium;
-    font-weight: 400; /* Extra bold like 'Swift' */
+    font-weight: 600; /* Extra bold like 'Swift' */
     color: white;
     letter-spacing: -1px; /* Tighter spacing for a modern look */
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -611,7 +612,7 @@ nav ul li a:hover, nav ul li a.active {
     max-width: 1200px;
     margin: 0 auto;
     box-sizing: border-box;
-    background: rgb(0, 21, 255); 
+    background: rgba(0, 21, 255, 0.275); 
     backdrop-filter: blur(10px);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -671,6 +672,7 @@ h1, h2, h3,h4 {
 p{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-style: normal;
+    font-size: medium;
     
 }
 .fa-ul li{
@@ -685,3 +687,6 @@ p{
 .fa-ul li{
     margin-bottom: 15px;
 }*/
+
+
+
