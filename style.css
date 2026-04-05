@@ -16,7 +16,7 @@ body {
 font-family: 'Inter', sans-serif;
     line-height: 1.6;
   padding-bottom: 60px;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.6;
   letter-spacing: -0.01em;
   -webkit-font-smoothing:antialiased;
@@ -146,7 +146,7 @@ background: rgb(0, 0, 0);
     padding: 40px;
     
     /* 1. Semi-transparent white background */
-    background: rgba(5, 0, 103, 0.26);
+    background: rgba(15, 8, 147, 0.183);
     
     
     /* 2. The Blur Effect - this creates the 'glass' look */
@@ -440,7 +440,7 @@ background: rgb(0, 0, 0);
 .input-group label {
     margin-bottom: 8px;
     font-weight: bold;
-    color: #000000; /* Gold Labels */
+    color: #8cff00; /* Gold Labels */
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -452,7 +452,7 @@ background: rgb(0, 0, 0);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 8px;
     padding: 12px;
-    color: #000000;
+    color: #ffffff;
     font-size: 1rem;
     backdrop-filter: blur(5px);
     transition: all 0.3s ease;
@@ -466,12 +466,12 @@ background: rgb(0, 0, 0);
     outline: none;
     background: rgba(157, 255, 0, 0.2);
     border-color: #f1c40f;
-    box-shadow: 0 0 15px rgba(241, 196, 15, 0.4);
+    box-shadow: 0 0 15px rgb(255, 234, 0);
     width:100%;
     padding:12px;
     border: 1px solid #ccc;
     border-radius: 8px ;
-    background-color: white;
+    background-color: rgb(0, 0, 0);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -602,22 +602,19 @@ background: rgb(0, 0, 0);
     font-size: 1.2rem;
 }
 
-.hero-content {
-    min-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 60px 20px;   
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    box-sizing: border-box;
-    background: rgba(0, 21, 255, 0.275); 
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    /*box-shadow: 0 10px 30px rgba(255, 255, 255, 0.944);*/
-    font-family: Georgia, 'Times New Roman', Times, serif;
+.hero-content{
+
+width: 100%;
+max-width: none;
+min-height: 100vh;
+padding: 80px 10% 40px;
+margin: 0;
+border-radius: 0;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+background: linear-gradient(rgba(0, 0, 50, 0.306)),rgba(0, 0, 50, 0.214);
+
 }
 
 .hero-title {
@@ -639,7 +636,7 @@ h1, h2, h3,h4 {
     line-height: 1.2;
     color: rgb(234, 255, 0);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: medium;
+    font-size: 1.5rem;
 }
 
 @keyframes pulse-glow {
@@ -672,7 +669,8 @@ h1, h2, h3,h4 {
 p{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-style: normal;
-    font-size: medium;
+    font-size: 1.1rem;
+    line-height: 1.5;
     
 }
 .fa-ul li{
@@ -681,6 +679,13 @@ p{
     padding-left: 10px;
 }
     
+@media(max-width:768px){
+    body{
+        font-size: 16px;
+    }
+}
+
+
 /*.fa-li{
     color-scheme: #2ecc71;
 }
