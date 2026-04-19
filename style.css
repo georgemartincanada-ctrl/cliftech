@@ -743,4 +743,24 @@ p{
 }*/
 
 
+/* Mobile Responsive Fix */
+@media (max-width: 768px) {
+    .services-container { 
+        display: flex;
+        flex-direction: column; /* Stacks cards on top of each other */
+        align-items: center;
+        padding: 20px;
+    }
 
+    .service-card {
+        width: 90% !important;  /* Gives the card breathing room on the sides */
+        margin-bottom: 20px;    /* Adds space between stacked cards */
+        min-height: auto;       /* Prevents weird stretching */
+        padding: 30px 20px;     /* evens out the internal spacing */
+    }
+
+    .service-card h3 {
+        font-size: 1.5rem;      /* Shrinks the title slightly so it doesn't break lines */
+        text-align: center;
+    }
+}
