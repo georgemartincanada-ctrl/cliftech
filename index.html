@@ -8,6 +8,7 @@
     <link rel="icon"type="image/png"href="cliftech white logo.jpeg">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> 
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css"rel="stylesheet">
 </head>
 <body>
     <nav>
@@ -29,19 +30,19 @@
 
 
             <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#index" class="active"><i class="fa-solid fa-house"></i>Home</a></li>
+                <li><a href="about.html"><i class="fa-solid fa-user"></i>About</a></li>
+                <li><a href="#services"><i class="fa-solid fa-gears"></i>Services</a></li>
+                <li><a href="#contact"><i class="fa-solid fa-envelope"></i>Contact</a></li>
             </ul>
         </div>
 
     </nav>
     
+<section id="home"class="full-page">
 
     <div class="container">
     <div class="hero-content" data-aos="zoom-in">
-        <h5 class="hero-title">CLIF <span class="highlight">TECH </span></h5>
         <ul class="hero-description">
   <p> Professional ICT training, creative design, and secure systems management.
     Whether you are a student or a business, we give you the tools to excel.
@@ -49,38 +50,166 @@
   <br>
 
 
-<h4><strong> The Three Pillars : </strong></h4>  
+<h4>The Three Pillars : </h4>  
 <ul class="fa-ul">
   <li> <span class="fa-li"><i class="fa-solid fa-wrench"></i></span>
-    <strong>We Fix:</strong> Professional hardware and software troubleshooting.
-  Whether it's BIOS configuration, OS installation, PC performance optimization,
+    <strong>We Fix:</strong> Professional software troubleshooting.
+  Whether it's BIOS configuration, OS installation, system performance optimization,
    we ensure your tech works for you.
    </li>
 
    
    <li> <span class="fa-li"><i class="fa-solid fa-code"></i></span>
     <strong>We Build:</strong> Bringing your brand to life through modern web development
-    and creative graphic design. From custom logos to responsive websites, we build your digital 
-    presence from the ground up.
+    and creative graphic design. We build your digital presence from the ground up.
    </li>
 
 
       <li> <span class="fa-li"><i class="fa-solid fa-shield-halved"></i></span>
    <strong>We Secure:</strong> Protecting what matters most. We implement and 
-    teach cybersecurity best practices, data protection, and secure networking 
-    to keep your information safe from threats. 
+    teach cybersecurity best practices, data protection to keep your information from threats. 
    </li>
 
 
 </ul>
-    
+</section>
 
-        
-        <div class="hero-btns">
-            </div>
+<section id="services"class="full-page">
+    <div class="container"data-aos="fade-up"> 
+    <h2 class="section-title">Our Services</h2>
+
+    <div class="services-grid">
+        <div class="service-card" data-aos="fade-up"data-aos-delay"0">
+            <span class="card-number">1</span>
+            <h3>System & Software</h3>
+            <p>We troubleshoot your systems and softwares.</p>
+            
+        </div>
+
+        <div class="service-card"data-aos="fade-up"data-aos-delay"200">
+            <span class="card-number">2</span>
+            <h3>Ethical Hacking</h3>
+            <p>We identify vulnerabilities in digital applications and 
+                strengthen digital defenses against malicious attacks.</p>
+        </div>
+
+        <div class="service-card"data-aos="fade-up"data-aos-delay"400">
+            <span class="card-number">3</span>
+            <h3>Website Design</h3>
+            <p>We build responsive websites for your brand.</p>
+        </div>
+
+        <div class="service-card"data-aos="fade-up"data-aos-delay"600">
+            <span class="card-number">4</span>
+            <h3>Graphic Design</h3>
+            <p>We design flyers and logos for brands.</p>
+        </div>
+
+        <div class="service-card"data-aos="fade-up"data-aos-delay"800">
+            <span class="card-number">5</span>
+            <h3>Phishing Defense</h3>
+            <p>We offer training on identifying and preventing social engineering threats.</p>
+         
+        </div>
+
+        <div class="service-card"data-aos="fade-up"data-aos-delay"1000">
+            <span class="card-number">6</span>
+            <h3>Productivity Software</h3>
+            <p>We offer training on Microsoft Word, Excel, and PowerPoint.</p>
+
+        </div>
+
+        <div class="service-card"data-aos="fade-up"data-aos-delay"1200">
+            <span class="card-number">7</span>
+            <h3>Cybersecurity</h3>
+            <p>We offer training in Data Protection, Encryption, 
+                Threat Detection and Digital Safety.</p>
+        </div>
+
+        <div class="service-card"data-aos="fade-up"data-aos-delay"1400">
+            <span class="card-number">8</span>
+            <h3>Coding</h3>
+            <p>Learn coding to build simple game applications.</p>
+        </div>
+
+      
+
+        <div class="service-card"data-aos="fade-up"data-aos-delay"1600">
+            <span class="card-number">9</span>
+            <h3>Drone Piloting</h3>
+            <p>We offer technical training in drone operations and safety.</p>
+        </div>
     </div>
 </div>
-    
+
+    </div>
+</section>
+
+
+<section id="contact"class="full-page">
+<div class="container"data-aos="flip-right">
+
+    <h2>Get In Touch</h2>
+    <h5>We are dedicated to providing high-quality digital solutions.</h5>
+
+    <div class="container">
+
+        <form action="https://formspree.io/f/xkopwgnv" method="POST" class="contact-form">
+            
+            <input type="hidden" name="_next" value="https://formspree.io/f/xkopwgnv">
+            
+            <div class="input-group">
+                <label for="name">Full Name</label>
+                <input type="text" name="name" id="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email address" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="contact">Contact Number</label>
+                <input type="tel" name="contact" id="contact" placeholder="Enter your contact" required>
+            </div>
+
+
+            <div class="input-group">
+                <label for="service">Interested Service</label>
+                <select name="service" id="service">
+                    <option value=""disabled selected>Choose a Service</option>
+                     <option value="System & Software">System & Software</option>
+                    <option value="Ethical Hacking">Ethical Hacking</option>
+                    <option value="Web Design">Website Design</option>
+                    <option value="Cybersecurity">Cybersecurity Fundamentals</option>
+                    <option value="Drone Piloting">Drone Piloting</option>
+                    <option value="Other">Other IT Support</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" rows="5" placeholder="Tell us how we can help you..." required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </div>
+
+</div>
+
+</section>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  window.addEventListener('load', function() {
+    AOS.init({
+      duration: 1000,
+      once: false,
+      mirror: true
+    });
+  });
+</script>
 <script>
     const menuToggle = document.getElementById('mobile-menu');
     const navLinks = document.querySelector('.nav-links');
@@ -100,7 +229,10 @@
         navContainer.classList.remove('scrolled');
     }
 });
+
+
 </script>
+
 
 </body>
 </html>
